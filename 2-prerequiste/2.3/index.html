@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> Set Up Amazon Aurora (MySQL Compatible) :: AWS System Manager</title>
+    <title>Installing Amazon Aurora &amp; RDS (MySQL Compatible) :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1748505537" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748505537" rel="stylesheet">
-    <link href="/css/hybrid.css?1748505537" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748505537" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748505537" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748505537" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748505537" rel="stylesheet">
-    <link href="/css/theme.css?1748505537" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748505537" rel="stylesheet">
+    <link href="/css/nucleus.css?1748507225" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748507225" rel="stylesheet">
+    <link href="/css/hybrid.css?1748507225" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748507225" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748507225" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748507225" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748507225" rel="stylesheet">
+    <link href="/css/theme.css?1748507225" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748507225" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1748505537" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1748507225" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1748505537"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748507225"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748505537"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748505537"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748507225"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748507225"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748505537"></script>
+<script type="text/javascript" src="/js/search.js?1748507225"></script>
 
     
   </div>
@@ -306,12 +306,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.3/" title=" Set Up Amazon Aurora (MySQL Compatible)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.3/" title="Installing Amazon Aurora &amp; RDS (MySQL Compatible)" class="dd-item
           
           active
           ">
         <a href="/2-prerequiste/2.3/">
-           <b> 2.3 </b>  Set Up Amazon Aurora (MySQL Compatible)
+          <b>2.3</b>Installing Amazon Aurora &amp; RDS (MySQL Compatible)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -387,12 +387,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.6/" title=" Configure AWS WAF (Web Application Firewall)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.6/" title="Configuring AWS WAF (Web Application Firewall)" class="dd-item
           
           
           ">
         <a href="/2-prerequiste/2.6/">
-          <b>2.6</b> Configure AWS WAF (Web Application Firewall)
+          <b>2.6</b>Configuring AWS WAF (Web Application Firewall)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -656,7 +656,7 @@
             
           
           
-            <a href='/'>Deploying a Movie Ticket Booking Website System – Using Amazon Web Services (AWS)</a> > <a href='/2-prerequiste/'>Deployment Steps </a> >  Set Up Amazon Aurora (MySQL Compatible)
+            <a href='/'>Deploying a Movie Ticket Booking Website System – Using Amazon Web Services (AWS)</a> > <a href='/2-prerequiste/'>Deployment Steps </a> > Installing Amazon Aurora & RDS (MySQL Compatible)
           
         
           
@@ -671,11 +671,25 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#"><img src="/images/2.prerequisite/aurora.jpg" alt="" title=""></a>
+    <li>
       <ul>
-        <li></li>
+        <li><a href="#purpose">Purpose</a></li>
       </ul>
     </li>
+    <li><a href="#steps-to-follow">Steps to Follow</a>
+      <ul>
+        <li><a href="#1-create-aurora-db-cluster">1. Create Aurora DB Cluster</a></li>
+        <li><a href="#connection-configuration">Connection Configuration</a></li>
+        <li><a href="#result">Result</a></li>
+      </ul>
+    </li>
+    <li><a href="#connecting-with-mysql-workbench">Connecting with MySQL Workbench</a>
+      <ul>
+        <li><a href="#2-download--configure-workbench">2. Download &amp; Configure Workbench</a></li>
+        <li><a href="#create-and-import-database">Create and Import Database</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -693,7 +707,7 @@
           
             <h1>
               
-               Set Up Amazon Aurora (MySQL Compatible)
+              Installing Amazon Aurora &amp; RDS (MySQL Compatible)
             </h1>
           
 
@@ -701,48 +715,131 @@
 
 
 
-	<p><strong>Purpose:</strong><br>
-Store relational data for the system (users, tickets, movies, &hellip;)</p>
-<h2><img src="/images/2.prerequisite/aurora.jpg" alt=""></h2>
-<h4 id="steps">Steps:</h4>
-<ol>
-<li><strong>Create Aurora DB Cluster</strong>
-<ul>
-<li>Select <strong>engine</strong>: MySQL</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/2.prerequisite/mysql.jpg" alt=""></p>
-<ol start="2">
-<li>
-<p><strong>Network Configuration</strong></p>
-<ul>
-<li>Choose <strong>Private Subnet</strong> in VPC</li>
-<li><strong>Public accessibility</strong>: Set to <strong>No</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Security Setup</strong></p>
-<ul>
-<li>Assign a <strong>Security Group</strong> that only allows connections from EC2 (port <code>3306</code>)</li>
-</ul>
-</li>
-<li>
-<p><strong>Initialize the Database</strong></p>
-<ul>
-<li>Create a database named: <code>phim-db</code></li>
-<li>Import data from the <code>.sql</code> file</li>
-</ul>
-</li>
-<li>
-<p><strong>Connect from Application</strong></p>
-<ul>
-<li>In PHP, use the <strong>Aurora host endpoint</strong> to connect</li>
-</ul>
-</li>
-</ol>
+	<h3 id="purpose">Purpose</h3>
+<p>Store relational data for the system such as users, tickets, movies, etc.</p>
+<p><img src="/images/2.prerequisite/aurora.jpg" alt="Aurora Overview"></p>
 <hr>
-<p>✅ Once completed, the system will have a powerful, secure, and efficient relational database to handle data related to users, tickets, and movies.</p>
+<h2 id="steps-to-follow">Steps to Follow</h2>
+<hr>
+<h3 id="1-create-aurora-db-cluster">1. Create Aurora DB Cluster</h3>
+<ul>
+<li>
+<p><strong>Engine</strong>: Select <code>MySQL</code><br>
+<img src="/images/2.prerequisite/selectmysql.jpeg" alt="Select MySQL"></p>
+</li>
+<li>
+<p><strong>Engine Version</strong>: <code>MySQL 8.0.41</code></p>
+</li>
+<li>
+<p><strong>Templates</strong>: <code>Free Tier</code></p>
+</li>
+<li>
+<p><strong>Availability</strong>: <code>Single-AZ DB instance deployment (1 instance)</code><br>
+<img src="/images/2.prerequisite/config.jpg" alt="Engine Config"></p>
+</li>
+</ul>
+<h4 id="db-settings">DB Settings</h4>
+<ul>
+<li><strong>DB Instance Identifier</strong>: <code>phimbd</code></li>
+<li><strong>Credentials Settings</strong>:
+<ul>
+<li><strong>Master Username</strong>: <code>admin</code></li>
+<li><strong>Credentials Management</strong>: <code>Self managed</code></li>
+<li><strong>Master Password</strong>: <code>........</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/2.prerequisite/pass.jpg" alt="DB Credentials"></p>
+<ul>
+<li><strong>Instance Type</strong>: <code>db.t3.micro</code><br>
+<img src="/images/2.prerequisite/cf2.jpeg" alt="Instance Type"></li>
+</ul>
+<hr>
+<h3 id="connection-configuration">Connection Configuration</h3>
+<ul>
+<li><strong>Compute Resource</strong>: If you already have an EC2 instance, select <code>Connect to an EC2 compute resource</code></li>
+<li><strong>Network Type</strong>: <code>IPv4</code></li>
+<li><strong>VPC</strong>: Select the previously created VPC</li>
+<li><strong>DB Subnet Group</strong>: Choose the related subnets</li>
+<li><strong>Public Access</strong>: <code>Yes</code> (allow external access)</li>
+</ul>
+<p><img src="/images/2.prerequisite/connect.jpeg" alt="Connectivity"></p>
+<hr>
+<h3 id="result">Result</h3>
+<p>The database <code>phimdb</code> has been successfully created.</p>
+<p><img src="/images/2.prerequisite/db.jpg" alt="RDS Created"></p>
+<hr>
+<h2 id="connecting-with-mysql-workbench">Connecting with MySQL Workbench</h2>
+<h3 id="2-download--configure-workbench">2. Download &amp; Configure Workbench</h3>
+<ul>
+<li>Open MySQL Workbench</li>
+<li>Import <code>.sql</code> data from local into RDS</li>
+</ul>
+<p><img src="/images/2.prerequisite/mysql1.jpg" alt="MySQL Workbench"></p>
+<ul>
+<li>Click the <code>+</code> icon under <em>MySQL Connections</em></li>
+<li>The <strong>Setup New Connection</strong> popup will appear</li>
+</ul>
+<p><img src="/images/2.prerequisite/first.jpg" alt="Setup Connection"></p>
+<h4 id="enter-the-following-information">Enter the following information:</h4>
+<ul>
+<li><strong>Connection Name</strong>: Any name you like</li>
+<li><strong>Hostname</strong>: Paste the RDS <code>Endpoint</code></li>
+<li><strong>Username</strong>: <code>admin</code></li>
+<li><strong>Password</strong>: Choose <code>Store in vault...</code> to enter the password</li>
+</ul>
+<p><img src="/images/2.prerequisite/denden.jpeg" alt="Enter Info"></p>
+<p><img src="/images/2.prerequisite/data_3.jpeg" alt="Ready to Connect"></p>
+<ul>
+<li>
+<p>Once the connection is created, a connection card will appear<br>
+<img src="/images/2.prerequisite/card.jpg" alt="Connection Card"></p>
+</li>
+<li>
+<p>Click the card to connect<br>
+<img src="/images/2.prerequisite/wait.jpg" alt="Connecting"></p>
+</li>
+<li>
+<p>Main interface of Workbench<br>
+<img src="/images/2.prerequisite/wait_1.jpg" alt="Workbench UI"></p>
+</li>
+</ul>
+<hr>
+<h3 id="create-and-import-database">Create and Import Database</h3>
+<ul>
+<li>
+<p>Create a new database named: <code>phimdb</code><br>
+<img src="/images/2.prerequisite/create.jpg" alt="Create DB"></p>
+</li>
+<li>
+<p>Write the SQL command to create the DB, run it using the ⚡ icon or press <code>F5</code></p>
+</li>
+<li>
+<p>Click <strong>refresh</strong> in the SCHEMAS section to see the new DB</p>
+</li>
+<li>
+<p>From the toolbar, select:<br>
+<code>Server → Data Import</code></p>
+<ul>
+<li><strong>Import Options</strong>: <code>Import from Self-Contained File</code></li>
+<li>Select the <code>.sql</code> file</li>
+<li><strong>Default Target Schema</strong>: <code>phimdb</code></li>
+<li>Click <strong>Start Import</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/2.prerequisite/create_1.jpg" alt="Import Step 1"><br>
+<img src="/images/2.prerequisite/create_2.jpg" alt="Import Step 2"><br>
+<img src="/images/2.prerequisite/create_3.jpg" alt="Import Step 3"><br>
+<img src="/images/2.prerequisite/create_4.jpg" alt="Import Step 4"></p>
+<ul>
+<li>After importing, click <strong>refresh</strong> in the <code>SCHEMAS</code> section</li>
+<li>Check if all the tables are displayed correctly</li>
+</ul>
+<p><img src="/images/2.prerequisite/create_5.jpg" alt="Import Done"></p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>After completing these steps, the system is now equipped with a <strong>powerful, secure, and efficient relational database</strong> to store data related to users, tickets, movies, and more.</p>
 
 
 
@@ -1055,19 +1152,19 @@ Store relational data for the system (users, tickets, movies, &hellip;)</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748505537"></script>
-    <script src="/js/jquery.sticky.js?1748505537"></script>
-    <script src="/js/featherlight.min.js?1748505537"></script>
-    <script src="/js/highlight.pack.js?1748505537"></script>
+    <script src="/js/clipboard.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748507225"></script>
+    <script src="/js/jquery.sticky.js?1748507225"></script>
+    <script src="/js/featherlight.min.js?1748507225"></script>
+    <script src="/js/highlight.pack.js?1748507225"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748505537"></script>
-    <script src="/js/learn.js?1748505537"></script>
-    <script src="/js/hugo-learn.js?1748505537"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748507225"></script>
+    <script src="/js/learn.js?1748507225"></script>
+    <script src="/js/hugo-learn.js?1748507225"></script>
 
-    <link href="/mermaid/mermaid.css?1748505537" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1748505537"></script>
+    <link href="/mermaid/mermaid.css?1748507225" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1748507225"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>EC2 Setup :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1748505537" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748505537" rel="stylesheet">
-    <link href="/css/hybrid.css?1748505537" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748505537" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748505537" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748505537" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748505537" rel="stylesheet">
-    <link href="/css/theme.css?1748505537" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748505537" rel="stylesheet">
+    <link href="/css/nucleus.css?1748507225" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748507225" rel="stylesheet">
+    <link href="/css/hybrid.css?1748507225" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748507225" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748507225" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748507225" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748507225" rel="stylesheet">
+    <link href="/css/theme.css?1748507225" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748507225" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1748505537" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1748507225" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1748505537"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748507225"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748505537"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748505537"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748507225"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748507225"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748505537"></script>
+<script type="text/javascript" src="/js/search.js?1748507225"></script>
 
     
   </div>
@@ -306,12 +306,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.3/" title=" Set Up Amazon Aurora (MySQL Compatible)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.3/" title="Installing Amazon Aurora &amp; RDS (MySQL Compatible)" class="dd-item
           
           
           ">
         <a href="/2-prerequiste/2.3/">
-           <b> 2.3 </b>  Set Up Amazon Aurora (MySQL Compatible)
+          <b>2.3</b>Installing Amazon Aurora &amp; RDS (MySQL Compatible)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -387,12 +387,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.6/" title=" Configure AWS WAF (Web Application Firewall)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.6/" title="Configuring AWS WAF (Web Application Firewall)" class="dd-item
           
           
           ">
         <a href="/2-prerequiste/2.6/">
-          <b>2.6</b> Configure AWS WAF (Web Application Firewall)
+          <b>2.6</b>Configuring AWS WAF (Web Application Firewall)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -703,10 +703,10 @@
 
 
 	<h3 id="purpose">Purpose:</h3>
-<p>Run PHP backend code on the server.</p>
+<p>Run backend PHP code on a server.</p>
 <h3 id="steps">Steps:</h3>
-<p><img src="/images/2.prerequisite/EC2.jpg" alt=""></p>
-<p><img src="/images/2.prerequisite/Net_EC2.jpg" alt=""></p>
+<p><img src="/images/2.prerequisite/EC2.jpg" alt="EC2"></p>
+<p><img src="/images/2.prerequisite/Net_EC2.jpg" alt="Network EC2"></p>
 <ol>
 <li>
 <p><strong>Create an EC2 instance</strong><br>
@@ -714,27 +714,43 @@ Use <strong>Amazon Linux 2023</strong> or <strong>Amazon Linux 2</strong> AMI.</
 </li>
 <li>
 <p><strong>Assign to Public Subnet</strong><br>
-Configure the Security Group to open ports:</p>
+Configure the Security Group to open the following ports:</p>
 <ul>
 <li><strong>22</strong> (SSH)</li>
 <li><strong>80</strong> (HTTP)</li>
 <li><strong>3306</strong> (MySQL/Aurora)</li>
 </ul>
+<p><img src="/images/2.prerequisite/port.jpg" alt="Open Ports"></p>
 </li>
-</ol>
-<p><img src="/images/2.prerequisite/port.jpg" alt=""></p>
-<ol start="3">
 <li>
 <p><strong>Set up the environment:</strong><br>
 Run the following commands to update the system and install PHP and Apache:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum update -y
-</span></span><span style="display:flex;"><span>sudo amazon-linux-extras enable php8.1
-</span></span><span style="display:flex;"><span>sudo yum install -y php php-mysqlnd httpd git
-</span></span><span style="display:flex;"><span>sudo systemctl enable httpd
-</span></span><span style="display:flex;"><span>sudo systemctl start httpd
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"></code></pre></div></li>
 </ol>
+<p>sudo yum update -y
+sudo amazon-linux-extras enable php8.1
+sudo yum install -y php php-mysqlnd httpd git
+sudo systemctl enable httpd
+sudo systemctl start httpd ```</p>
+<ol start="4">
+<li><strong>Push code from the local machine to the server</strong><br>
+From your <strong>local machine</strong>, push the <strong>project backend</strong> to the <strong>Amazon EC2 service</strong> to start deploying the application layer.</li>
+</ol>
+<p><img src="/images/2.prerequisite/local.jpg" alt=""></p>
+<ol start="5">
+<li><strong>Extract the uploaded files</strong><br>
+After uploading, unzip the file on the server.</li>
+</ol>
+<p><img src="/images/2.prerequisite/unzip.jpg" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unzip <span style="color:#e6db74">&#34;.....&#34;</span>.zip
+</span></span></code></pre></div><p>Move the folder from /home/ec2-user/&hellip; to /var/www/html (Apache Server)</p>
+<pre><code>  ```bash
+</code></pre>
+<p>sudo mv /home/ec2-user/&hellip;. /var/www/html/</p>
+<pre tabindex="0"><code>After moving the folder, verify it using the command: ```ls -l /var/www/html/...```
 
+![](/images/2.prerequisite/ls.jpeg &#34;&#34;)
+</code></pre>
 
 
 
@@ -1046,19 +1062,19 @@ Run the following commands to update the system and install PHP and Apache:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748505537"></script>
-    <script src="/js/jquery.sticky.js?1748505537"></script>
-    <script src="/js/featherlight.min.js?1748505537"></script>
-    <script src="/js/highlight.pack.js?1748505537"></script>
+    <script src="/js/clipboard.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748507225"></script>
+    <script src="/js/jquery.sticky.js?1748507225"></script>
+    <script src="/js/featherlight.min.js?1748507225"></script>
+    <script src="/js/highlight.pack.js?1748507225"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748505537"></script>
-    <script src="/js/learn.js?1748505537"></script>
-    <script src="/js/hugo-learn.js?1748505537"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748507225"></script>
+    <script src="/js/learn.js?1748507225"></script>
+    <script src="/js/hugo-learn.js?1748507225"></script>
 
-    <link href="/mermaid/mermaid.css?1748505537" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1748505537"></script>
+    <link href="/mermaid/mermaid.css?1748507225" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1748507225"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

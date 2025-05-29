@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> Configure AWS WAF (Web Application Firewall) :: AWS System Manager</title>
+    <title>Configuring AWS WAF (Web Application Firewall) :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1748505537" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748505537" rel="stylesheet">
-    <link href="/css/hybrid.css?1748505537" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748505537" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748505537" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748505537" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748505537" rel="stylesheet">
-    <link href="/css/theme.css?1748505537" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748505537" rel="stylesheet">
+    <link href="/css/nucleus.css?1748507225" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748507225" rel="stylesheet">
+    <link href="/css/hybrid.css?1748507225" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748507225" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748507225" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748507225" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748507225" rel="stylesheet">
+    <link href="/css/theme.css?1748507225" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748507225" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1748505537" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1748507225" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1748505537"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748507225"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -79,14 +79,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748505537"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748505537"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748507225"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748507225"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748505537"></script>
+<script type="text/javascript" src="/js/search.js?1748507225"></script>
 
     
   </div>
@@ -306,12 +306,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.3/" title=" Set Up Amazon Aurora (MySQL Compatible)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.3/" title="Installing Amazon Aurora &amp; RDS (MySQL Compatible)" class="dd-item
           
           
           ">
         <a href="/2-prerequiste/2.3/">
-           <b> 2.3 </b>  Set Up Amazon Aurora (MySQL Compatible)
+          <b>2.3</b>Installing Amazon Aurora &amp; RDS (MySQL Compatible)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -387,12 +387,12 @@
   
     
       
-      <li data-nav-id="/2-prerequiste/2.6/" title=" Configure AWS WAF (Web Application Firewall)" class="dd-item
+      <li data-nav-id="/2-prerequiste/2.6/" title="Configuring AWS WAF (Web Application Firewall)" class="dd-item
           
           active
           ">
         <a href="/2-prerequiste/2.6/">
-          <b>2.6</b> Configure AWS WAF (Web Application Firewall)
+          <b>2.6</b>Configuring AWS WAF (Web Application Firewall)
           
             <i class="fas fa-check read-icon"></i>
           
@@ -656,7 +656,7 @@
             
           
           
-            <a href='/'>Deploying a Movie Ticket Booking Website System – Using Amazon Web Services (AWS)</a> > <a href='/2-prerequiste/'>Deployment Steps </a> >  Configure AWS WAF (Web Application Firewall)
+            <a href='/'>Deploying a Movie Ticket Booking Website System – Using Amazon Web Services (AWS)</a> > <a href='/2-prerequiste/'>Deployment Steps </a> > Configuring AWS WAF (Web Application Firewall)
           
         
           
@@ -674,13 +674,13 @@
     <li><a href="#objective">Objective</a></li>
     <li><a href="#implementation-steps">Implementation Steps</a>
       <ul>
-        <li><a href="#1-navigate-to-aws-waf--web-acls--create-web-acl">1. Navigate to <strong>AWS WAF → Web ACLs → Create Web ACL</strong></a></li>
+        <li><a href="#1-go-to-aws-waf--web-acls--create-web-acl">1. Go to <strong>AWS WAF → Web ACLs → Create Web ACL</strong></a></li>
         <li><a href="#2-associate-the-web-acl-with-the-application-load-balancer">2. Associate the Web ACL with the <strong>Application Load Balancer</strong></a></li>
         <li><a href="#3-define-security-rules">3. Define Security Rules</a></li>
         <li><a href="#4-monitor-waf-logs">4. Monitor WAF Logs</a></li>
       </ul>
     </li>
-    <li><a href="#result">Result</a></li>
+    <li><a href="#outcome">Outcome</a></li>
   </ul>
 </nav>
     </div>
@@ -698,7 +698,7 @@
           
             <h1>
               
-               Configure AWS WAF (Web Application Firewall)
+              Configuring AWS WAF (Web Application Firewall)
             </h1>
           
 
@@ -711,37 +711,37 @@
 <p><img src="/images/2.prerequisite/waf.jpg" alt=""></p>
 <hr>
 <h2 id="implementation-steps">Implementation Steps</h2>
-<h3 id="1-navigate-to-aws-waf--web-acls--create-web-acl">1. Navigate to <strong>AWS WAF → Web ACLs → Create Web ACL</strong></h3>
-<p>Begin by creating a new Web ACL (Access Control List) in the AWS WAF console.</p>
+<h3 id="1-go-to-aws-waf--web-acls--create-web-acl">1. Go to <strong>AWS WAF → Web ACLs → Create Web ACL</strong></h3>
+<p>Start by creating a new Web ACL (Access Control List) in the AWS WAF console.</p>
 <p><img src="/images/2.prerequisite/alccreate.jpeg" alt=""></p>
 <hr>
 <h3 id="2-associate-the-web-acl-with-the-application-load-balancer">2. Associate the Web ACL with the <strong>Application Load Balancer</strong></h3>
-<p>During setup, link the Web ACL to the appropriate ALB that routes your web traffic.</p>
+<p>During the setup, attach the Web ACL to the Application Load Balancer (ALB) responsible for forwarding web traffic.</p>
 <hr>
 <h3 id="3-define-security-rules">3. Define Security Rules</h3>
 <ul>
 <li>
-<p><strong>Managed Rule Groups</strong>:<br>
-Add <code>AWSManagedRulesCommonRuleSet</code> to apply a comprehensive set of pre-configured protections.</p>
+<p><strong>Managed Rule Groups:</strong><br>
+Add <code>AWSManagedRulesCommonRuleSet</code> to apply AWS’s preconfigured standard protection rules.</p>
 </li>
 <li>
-<p><strong>Custom Rules (optional)</strong>:<br>
-Define additional rules based on:</p>
+<p><strong>Custom Rules (optional):</strong><br>
+You can also define custom rules based on:</p>
 <ul>
 <li>IP addresses</li>
 <li>Request URI paths</li>
 <li>HTTP methods</li>
 <li>User-Agent headers</li>
-<li>Rate limits</li>
+<li>Rate limiting</li>
 </ul>
 </li>
 </ul>
 <hr>
 <h3 id="4-monitor-waf-logs">4. Monitor WAF Logs</h3>
-<p>Utilize AWS WAF logging to monitor and analyze blocked requests for better visibility and continuous improvement of your ruleset.</p>
+<p>Use AWS WAF logging to monitor and analyze blocked requests, enabling continuous improvement of your rules.</p>
 <hr>
-<h2 id="result">Result</h2>
-<p>Once configured, the system will be significantly more resilient against common web-based attacks, improving both <strong>security posture</strong> and <strong>service availability</strong>.</p>
+<h2 id="outcome">Outcome</h2>
+<p>Once configured, the system becomes more resilient against common web attacks, improving both <strong>security posture</strong> and <strong>service availability</strong>.</p>
 
 
 
@@ -1054,19 +1054,19 @@ Define additional rules based on:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748505537"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748505537"></script>
-    <script src="/js/jquery.sticky.js?1748505537"></script>
-    <script src="/js/featherlight.min.js?1748505537"></script>
-    <script src="/js/highlight.pack.js?1748505537"></script>
+    <script src="/js/clipboard.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748507225"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748507225"></script>
+    <script src="/js/jquery.sticky.js?1748507225"></script>
+    <script src="/js/featherlight.min.js?1748507225"></script>
+    <script src="/js/highlight.pack.js?1748507225"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748505537"></script>
-    <script src="/js/learn.js?1748505537"></script>
-    <script src="/js/hugo-learn.js?1748505537"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748507225"></script>
+    <script src="/js/learn.js?1748507225"></script>
+    <script src="/js/hugo-learn.js?1748507225"></script>
 
-    <link href="/mermaid/mermaid.css?1748505537" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1748505537"></script>
+    <link href="/mermaid/mermaid.css?1748507225" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1748507225"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

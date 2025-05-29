@@ -93,19 +93,6 @@
                 href="//localhost:1313/2-prerequiste/2.2/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.3/</loc>
-    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.3/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-prerequiste/2.2/2.2.3/</loc>
     <lastmod>2025-05-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -130,6 +117,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/3/"
+                />
+  </url><url>
+    <loc>//localhost:1313/2-prerequiste/2.3/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.3/"
                 />
   </url><url>
     <loc>//localhost:1313/2-prerequiste/2.4/</loc>
