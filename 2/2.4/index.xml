@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> Configure Amazon Route 53 on AWS System Manager</title>
-    <link>//localhost:1313/2/2.4/</link>
+    <link>https://phu-quy-workshop.vercel.app//2/2.4/</link>
     <description>Recent content in  Configure Amazon Route 53 on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//localhost:1313/2/2.4/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://phu-quy-workshop.vercel.app//2/2.4/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
