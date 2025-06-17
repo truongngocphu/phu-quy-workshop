@@ -9,6 +9,12 @@ BanVeXemPhim là một nền tảng đặt vé xem phim trực tuyến, cho phé
   
 Dự án được xây dựng với mục tiêu tối ưu hóa trải nghiệm người dùng và quản lý hệ thống rạp chiếu phim một cách chuyên nghiệp.
 
+# Mô hình dịch vụ Amazon Web Services thiết kế trên Draw.io
+![diagram](https://github.com/user-attachments/assets/968676f1-2a94-4cae-bce3-51a3d1624e29)
+## Mô hình ba lớp
+![WorkShop drawio](https://github.com/user-attachments/assets/5480606f-8511-464b-b71f-1e216aed6bb1)
+## Link Workshop Documentation
+### 👉 [Truy cập Workshop hướng dẫn triển khai hệ thống AWS tại đây](https://phu-quy-workshop.vercel.app/)
 # 🚀 Tính năng nổi bật
 1. Đối với người dùng (User)
 - 🔍 Tìm kiếm phim và lịch chiếu: Xem danh sách phim đang chiếu, xem Trailer, lịch chiếu theo ngày, rạp, phòng và khu vực.
